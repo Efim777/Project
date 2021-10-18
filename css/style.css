@@ -1,29 +1,40 @@
-* {
-    margin: 0px;
-    padding: 0px;
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
 }
 
-ul, ol{
+ul,
+ol {
     list-style: none;
 }
-a{
+a {
     text-decoration: none;
 }
 a:hover {
     text-decoration: none;
 }
-body{
+
+body {
     color: #141414;
     background: #ffffff;
     letter-spacing: 1.5px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
 }
-.container{
+.container {
     max-width: 1200px;
-    width: 100%;
     padding: 0 15px;
     margin: 0 auto;
+    width: 100%;
 }
-.header{
+
+.header {
     margin: 30px 0;
 }
 .header__body {
@@ -31,6 +42,7 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+
 .header__logo {
     font-style: 21px;
     font-weight: 700;
@@ -42,7 +54,7 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.header__item:not(:last-child){
+.header__item:not(:last-child) {
     margin-right: 78px;
 }
 .header__link {
@@ -52,49 +64,50 @@ body{
     color: #141414;
     text-transform: uppercase;
 }
-.preview{
+
+.preview {
+    /* Все подобные отступы между секциями или блоками, которые явно будут большие на планшете и мобильной версии нужно плавно уменьшать */
     padding: 160px 0;
 }
-.preview__wrapper{
+.preview__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.preview__images{
+.preview__images {
     position: relative;
 }
-.preview__images img{
+.preview__images img {
     max-width: 800px;
     width: 100%;
 }
-.preview__title{
+.preview__title {
     font-size: 96px;
     line-height: 113px;
     font-weight: 700;
     text-transform: uppercase;
     position: absolute;
 }
-.preview__title-span{
+.preview__title-span {
     color: transparent;
     -webkit-text-stroke: 1px #141414;
 }
-.preview__title_top{
+.preview__title_top {
     top: -106px;
     left: -200px;
-
 }
-.preview__title_bottom{
+.preview__title_bottom {
     bottom: -113px;
     right: -200px;
 }
-.preview__title-black{
+.preview__title-black {
     display: block;
     color: transparent;
     -webkit-text-stroke: 1px #141414;
 }
-.projects{
-    background: url('../img/background1.png') no-repeat center/cover;
+.projects {
+    background: url("../img/background1.png") no-repeat center/cover;
     padding: 57px 0;
 }
 .wrapper {
@@ -105,37 +118,37 @@ body{
     width: 100%;
     margin: 0 auto;
 }
-.content__title{
+.content__title {
     font-size: 96px;
     line-height: 113px;
     text-transform: uppercase;
     font-weight: 400;
 }
-.project__body{
+.project__body {
     margin-top: 50px;
 }
-.projects__item{
+.projects__item {
     display: flex;
     flex-direction: column;
 }
-.projects__item img{
+.projects__item img {
     max-width: 570px;
     width: 100%;
 }
-.img3{
+.img3 {
     max-width: 918px;
     width: 100%;
 }
-.projects__item:nth-child(2){
+.projects__item:nth-child(2) {
     align-items: flex-end;
 }
-.projects__item:last-child{
+.projects__item:last-child {
     align-items: center;
 }
 .projects__item:not(:first-child) {
     margin-top: 150px;
 }
-.projects__text{
+.projects__text {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -144,7 +157,7 @@ body{
     width: 100%;
     text-transform: uppercase;
 }
-.projects__text_bottom{
+.projects__text_bottom {
     max-width: 570px;
 }
 .about {
@@ -161,20 +174,20 @@ body{
     width: 100%;
     margin-right: 30px;
 }
-.about__text{
+.about__text {
     font-size: 18px;
     line-height: 22px;
 }
-.about__text:not(:last-child){
+.about__text:not(:last-child) {
     margin-bottom: 38px;
 }
-.about__img-wrapper{
+.about__img-wrapper {
     display: flex;
     flex-direction: column;
     align-items: end;
     position: relative;
 }
-.about__img-wrapper img{
+.about__img-wrapper img {
     max-width: 514px;
     width: 100%;
 }
@@ -189,10 +202,10 @@ body{
     max-width: 368px;
     width: 100%;
 }
-.skills{
+.skills {
     padding: 75px 0;
 }
-.skills__body{
+.skills__body {
     display: flex;
     align-items: center;
     width: 100%;
@@ -200,34 +213,36 @@ body{
     margin-top: 50px;
     margin-bottom: 100px;
 }
-.skills__content{
+.skills__content {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     max-width: 570px;
     width: 100%;
 }
-.item{
+.item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
-    border-top: 1px solid #DCDCDC;
+    border-top: 1px solid #dcdcdc;
 }
 .item:last-child {
-    border-bottom: 1px solid #DCDCDC; 
+    border-bottom: 1px solid #dcdcdc;
 }
-.item__text{
+.item__text {
+    /* Линии я бы уменьшил до 25px на 576 и текст до 16px, это сделает их эстетически лучше и они не будут налазить друг на друга */
     font-size: 18px;
     line-height: 22px;
     text-transform: uppercase;
 }
-.item__lines{
+.item__lines {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.item__line{
+.item__line {
+    /* Линии я бы уменьшил до 25px на 576 и текст до 16px */
     width: 30px;
     height: 2px;
     background: #141414;
@@ -237,29 +252,29 @@ body{
     margin-right: 10px;
 }
 .item__line_opacity {
-    background: #BEBEBE;
+    background: #bebebe;
 }
-.contact__wrapper{
+.contact__wrapper {
     max-width: 400px;
 }
 .contact {
     padding: 75px 0;
 }
- 
+
 .contact__body {
     margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.contact__text{
+.contact__text {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
-.contact__text_bottom{
+.contact__text_bottom {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -268,22 +283,23 @@ body{
     position: relative;
     padding-right: 50px;
 }
-.contact__text_bottom::after{
-    content: url('../img/Arrow1.png');
+.contact__text_bottom::after {
+    /* стрелка ломает контент на меньше 425px, нужно ее перемещать под текст */
+    content: url("../img/Arrow1.png");
     position: absolute;
     right: -35px;
     top: 9%;
 }
-.footer{
+.footer {
     padding-top: 75px 0;
 }
-.footer__body{
+.footer__body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 85px;
 }
 
-.footer__link{
+.footer__link {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -291,11 +307,11 @@ body{
     text-transform: uppercase;
     padding-bottom: 20px;
 }
-.footer__item{
+.footer__item {
     position: relative;
 }
-.footer__item::after{
-    content: '';
+.footer__item::after {
+    content: "";
     position: absolute;
     width: 100%;
     height: 1px;
@@ -304,91 +320,90 @@ body{
     left: 0;
 }
 
-.footer__items{
+.footer__items {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    /* flex-wrap: wrap;  Я бы добавил перенос и учел бы все отступы при переносе, так как у тебя на 320 текст склеивается в одну строку. Или если не делать перенос, то хотя бы уменьшить шрифт. Но при добавлении еще item, все же переносы и отступы нужно было бы учесть.*/
 }
-.footer__item:not(:last-child){
+.footer__item:not(:last-child) {
     margin-right: 87px;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
     .preview__title {
         font-size: 81px;
         line-height: 81px;
     }
-  
+
     .preview__title_top {
         top: -80px;
         left: -100px;
     }
-  
+
     .preview__title_bottom {
         bottom: -75px;
         right: -100px;
     }
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
     .header__item:not(:last-child) {
         margin-right: 40px;
     }
     .preview__title_top {
-     left: 0;
-    }   
-  
-     .preview__title_bottom {
+        left: 0;
+    }
+
+    .preview__title_bottom {
         right: 0;
     }
-    /* .content__title{
-        margin-top: 100px;
-        margin-left: 300px;
-    } */
-    .footer__body{
+
+    .footer__body {
         flex-direction: column-reverse;
     }
-    .footer__items{
-        margin-left: 295px;
+    .footer__items {
+        /* Не понимаю зачем тебе здесь отступ, он ломает весь твой макет */
+        /* margin-left: 295px; */
     }
-    .content__title:last-child{
+    .content__title:last-child {
         margin-top: 100px;
         margin-left: 300px;
     }
-    .title2021{
+    .title2021 {
         margin-top: 100px;
         margin-left: 295px;
     }
 }
 
-@media screen and (max-width: 768px){
-    .header__items{
+@media screen and (max-width: 768px) {
+    .header__items {
         display: none;
     }
     .content__title {
         font-size: 81px;
         line-height: 93px;
     }
-    .about__body{
+    .about__body {
         flex-direction: column-reverse;
         align-items: flex-end;
     }
-    .about__text-wrapper{
+    .about__text-wrapper {
         margin-right: 0;
         margin-top: 50px;
     }
-    .contact__text{
+    .contact__text {
         max-width: 517px;
     }
-    .footer__items{
+    .footer__items {
         margin-left: 0;
     }
-    .title2021{
+    .title2021 {
         margin-left: 0;
     }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
     .preview__title {
         font-size: 60px;
         line-height: 77px;
@@ -397,21 +412,21 @@ body{
         font-size: 60px;
         line-height: 50px;
     }
-    .about__img-text{
+    .about__img-text {
         left: 0px;
     }
-    .footer__link{
+    .footer__link {
         font-size: 18px;
     }
     .footer__item:not(:last-child) {
         margin-right: auto;
         letter-spacing: 0.5px;
     }
-
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 400px) {
     .preview__title {
+        /* смело уменьшай до 41px, так как на 320 у тебя не влезет в экран. Текст будет занимать 312px + отступы по сторонам в 15px итог на 342px у тебя ломается верстка.*/
         font-size: 48px;
         line-height: 50px;
     }
@@ -421,26 +436,26 @@ body{
     .preview__title_bottom {
         bottom: -47px;
     }
-    .about__img-text{
+    .about__img-text {
         left: auto;
         max-width: 230px;
         font-size: 18px;
         line-height: 21px;
     }
-    .max-width-66{
+    .max-width-66 {
         max-width: 66px;
     }
-    .contact__text{
+    .contact__text {
         font-size: 18px;
         line-height: 21px;
     }
-    .contact__text_bottom{
+    .contact__text_bottom {
         font-size: 18px;
         line-height: 21px;
     }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 320px) {
     .content__title {
         font-size: 48px;
         line-height: 40px;
